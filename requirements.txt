@@ -1,0 +1,8 @@
+dynaconf==3.2.6
+lyricsgenius==3.2.0
+chromadb
+openai
+transformers
+torch
+pyyaml
+streamlit

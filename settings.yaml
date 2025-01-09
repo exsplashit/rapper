@@ -1,0 +1,26 @@
+---
+db:
+  path: db/chromadb_store
+  embedding_model: text-embedding-ada-002
+llm:
+  use_openai: true
+  model_name: gpt-3.5-turbo
+agent:
+  prompt: You are an assistant specializing in answering questions using song lyrics.
+scrape:
+  genius:
+    token: <token-from-genius>
+    rules:
+      - artist: Kunteynir
+        max_songs: 40
+      - artist: АК-47
+        max_songs: 30
+      - artist: Гуф
+        max_songs: 40
+      - artist: Чёрная Экономика
+        max_songs: 5
+      - artist: Каспийский Груз
+        max_songs: 10
+      - artist: CENTR
+        max_songs: 20
+  output_dir: lyrics_output
