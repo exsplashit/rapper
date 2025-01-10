@@ -49,10 +49,8 @@ class BaseScraper(ABC):
 
         for song in song_data:
             # Construct the filename
-            filename = f"{song['artist']}_{
-                song['song_name']}.json".replace(
-                " ", "_"
-            )
+            filename = f"{song['artist']}_"
+            f"{song['song_name']}.json".replace(" ", "_")
             file_path = os.path.join(output_dir, filename)
 
             # Skip if the file already exists
@@ -67,6 +65,6 @@ class BaseScraper(ABC):
             saved_files += 1
 
         print(
-            f"Saved {saved_files} new song(s) to {output_dir}. Skipped {
-                skipped_files} existing file(s)."
+            f"Saved {saved_files} new song(s) to {output_dir}. "
+            "Skipped {skipped_files} existing file(s)."
         )
